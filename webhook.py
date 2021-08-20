@@ -67,7 +67,7 @@ while True:
             embed.add_embed_field(name="Uso de RAM:", value=f"{math.ceil((psutil.virtual_memory()[3]/1024)/1024)} MB ({psutil.virtual_memory()[2]}%)", inline=False)
             embed.add_embed_field(name="Ping:", value=f"{response_list.rtt_avg_ms} ms", inline=False)
             embed.add_embed_field(name="Ultima actualización:", value=f"<t:{int(datetime.datetime.now().timestamp())}:R>", inline=False)
-            embed.set_footer(text=f'IP: {external_ip} | Server uptime:: {math.ceil(uptime()/3600)} horas')
+            embed.set_footer(text=f'IP: {external_ip} | Server uptime: {math.ceil(uptime()/3600)} horas')
             embed.set_thumbnail(url='') # INSERTAR URL DE LOGO
             embed.set_timestamp()
             webhook = DiscordWebhook(url='INSERTAR TU URL DE WEBHOOK AQUÍ',embeds=[embed])
