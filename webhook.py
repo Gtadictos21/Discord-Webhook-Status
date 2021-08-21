@@ -13,7 +13,7 @@ import urllib.request
 from uptime import uptime
 from pythonping import ping
 
-processName="EXAMPLE.py" # Nombre de archivo a controlar
+processName="EXAMPLE.py" # Nombre de archivo a controlar (Puede ser .jar/.js/.py/etc.)
 
 # IP del servidor:
 external_ip = urllib.request.urlopen('https://ident.me').read().decode('utf8')
@@ -43,7 +43,7 @@ while True:
             # Ping a los servidores de Discord (Solo para verificar que la red se encuentre en condiciones) (https://support.discord.com/hc/es/articles/216740328--Windows-C%C3%B3mo-realizar-un-Traceroute-para-Discord)
             response_list = ping('brazil4777.discord.gg', size=40, count=10)
 
-            embed_off = DiscordEmbed(title='¡Botadictos21 se ha desconectado!', description='Este bot se encuentra 🔴', color=0xff0000)
+            embed_off = DiscordEmbed(title='¡{NOMBRE DEL SISTEMA AQUÍ} se ha desconectado!', description='Este proceso se encuentra 🔴', color=0xff0000)
             embed_off.add_embed_field(name="Uso de CPU:", value=f"{psutil.cpu_percent()}%", inline=False)
             embed_off.add_embed_field(name="Uso de RAM:", value=f"{math.ceil((psutil.virtual_memory()[3]/1024)/1024)} MB ({psutil.virtual_memory()[2]}%)", inline=False)
             embed_off.add_embed_field(name="Ping:", value=f"{response_list.rtt_avg_ms} ms", inline=False)
@@ -62,7 +62,7 @@ while True:
             # Ping a los servidores de Discord (Solo para verificar que la red se encuentre en condiciones) (https://support.discord.com/hc/es/articles/216740328--Windows-C%C3%B3mo-realizar-un-Traceroute-para-Discord)
             response_list = ping('brazil4777.discord.gg', size=40, count=10)
 
-            embed = DiscordEmbed(title='¡Botadictos21 se ha conectado!', description='Este bot se encuentra 🟢', color=0x2bff00)
+            embed = DiscordEmbed(title='¡{NOMBRE DEL SISTEMA AQUÍ} se ha conectado!', description='Este proceso se encuentra 🟢', color=0x2bff00)
             embed.add_embed_field(name="Uso de CPU:", value=f"{psutil.cpu_percent()}%", inline=False)
             embed.add_embed_field(name="Uso de RAM:", value=f"{math.ceil((psutil.virtual_memory()[3]/1024)/1024)} MB ({psutil.virtual_memory()[2]}%)", inline=False)
             embed.add_embed_field(name="Ping:", value=f"{response_list.rtt_avg_ms} ms", inline=False)
@@ -75,7 +75,7 @@ while True:
             encontrado_og = True
         else:
 
-            new_embed = DiscordEmbed(title='¡Botadictos21 se ha conectado!', description='Este bot se encuentra 🟢', color=0x2bff00)
+            new_embed = DiscordEmbed(title='¡{NOMBRE DEL SISTEMA AQUÍ} se ha conectado!', description='Este proceso se encuentra 🟢', color=0x2bff00)
             new_embed.add_embed_field(name="Uso de CPU:", value=f"{psutil.cpu_percent()}%", inline=False)
             new_embed.add_embed_field(name="Uso de RAM:", value=f"{math.ceil((psutil.virtual_memory()[3]/1024)/1024)} MB ({psutil.virtual_memory()[2]}%)", inline=False)
             new_embed.add_embed_field(name="Ping:", value=f"{response_list.rtt_avg_ms} ms", inline=False)
