@@ -23,7 +23,7 @@ pip install pythonping
 pip3 install uptime
 ```
 
-**ATENCIÓN:** Tienen que agregar el [link a su WebHook](https://support.discord.com/hc/es/articles/228383668-Introducci%C3%B3n-a-los-webhook) en el codigo, y deben (si es que quieren tener un logo en el webhook) agregar un link a un logo/foto. Ademas, si quieren que el bot haga el ping a otro servidor (que no sea los servidores de Discord), también deben cambiar el dominio al cual el bot le hace ping, y por ultimo, **DEBEN CAMBIAR EL NOMBRE DEL PROCESO A REVISAR, EN LA LINEA 17**. Claro que pueden personalizar cada mensaje, y pueden adaptarlo a sus necesidades.
+**ATENCIÓN:** Tienen que agregar el [link a su WebHook](https://support.discord.com/hc/es/articles/228383668-Introducci%C3%B3n-a-los-webhook) en el codigo, y deben (si es que quieren tener un logo en el webhook) agregar un link a un logo/foto. Ademas, si quieren que el bot haga el ping a otro servidor (que no sea los servidores de Discord), también deben cambiar el dominio al cual el bot le hace ping, y por ultimo, **DEBEN CAMBIAR EL NOMBRE DEL PROCESO A REVISAR, EN LA [LINEA 16](https://github.com/Gtadictos21/Discord-Webhook-Status/blob/079e1c85cfe8001373fbd101206bb51c55c90ad4/webhook.py#L16)**. Claro que pueden personalizar cada mensaje, y pueden adaptarlo a sus necesidades.
 
 Para ejecutar el WebHook: `python3 webhook.py`, o pueden hacerlo con [Systemd](https://github.com/Gtadictos21/Discord-Webhook-Status/blob/main/webhook.service) (recomendable)
 
