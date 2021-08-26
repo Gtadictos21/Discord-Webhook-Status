@@ -4,10 +4,9 @@
 Description=Inicia WebHook
 
 [Service]
+User=root
 ExecStart=/usr/bin/python3 /path/to/file/webhook.py
-Type=oneshot
-RemainAfterExit=yes
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
-User=root
